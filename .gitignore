@@ -1,0 +1,7 @@
+# data files
+*.csv
+
+# automatic generated files
+/src.egg-info
+/src/__pycache__/*
+/src/config/logging.ini

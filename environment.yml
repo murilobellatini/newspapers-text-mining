@@ -1,0 +1,25 @@
+name: ds-env
+channels:
+  - anaconda-fusion 
+  - defaults
+  - conda-forge
+  - plotly
+dependencies:
+  - python
+  - pip
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - tqdm
+  - wordcloud
+  - scikit-learn
+  - nltk
+  - gensim
+  - pyarrow
+  - fastparquet
+  - python-json-logger
+  - pip:
+    - -e . # installs src through setup.py
+  
