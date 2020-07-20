@@ -33,6 +33,8 @@ conda env create -f environment.yml
 conda activate ds-env
 ```
 
+* Run notebooks as you wish
+
 ## Folder organization
 
     ├── README.md                   <- The top-level README for scientists and engineers.

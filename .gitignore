@@ -1,7 +1,11 @@
 # data files
 *.csv
+*.pyc
 
 # automatic generated files
 /src.egg-info
 /src/__pycache__/*
 /src/config/logging.ini
+
+# credentials are confidential!
+/credentials
