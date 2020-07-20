@@ -70,7 +70,7 @@ def get_day_range_list(begin_date:datetime.datetime, end_date:datetime.datetime)
             break
     return output_days_list
 
-def get_desk_articles(desks:list, begin_date:datetime.datetime, end_date:datetime.datetime, sleep_time:int=10, export_data:bool=True):
+def extract_desk_articles(desks:list, begin_date:datetime.datetime, end_date:datetime.datetime, sleep_time:int=10, export_data:bool=True):
     """
     Returns list of articles within scope:
     - `desks`: list of themes to be scrapped
