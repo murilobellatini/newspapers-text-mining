@@ -1,6 +1,7 @@
 # data files
 *.csv
 *.pyc
+*-checkpoint.ipynb
 
 # automatic generated files
 /src.egg-info
