@@ -91,15 +91,14 @@ def extract_desk_articles(desks:list, begin_date:datetime.datetime, end_date:dat
                 total_articles = response.json()['response']['meta']['hits']
                 response_docs = response.json()['response']['docs']
                 output_articles.extend(response_docs)
+                if export_data:
+                    export_data_to_csv(response_docs)
                 page += 1
                 if scrapped_articles >= total_articles:
                     break
                 time.sleep(sleep_time)
-            except:
-                logger.error(api_url, response.json())
-
-    if export_data:
-        export_data_to_csv(output_articles)
+            except Exception as e:
+                logger.error(f'Error `{e}` at `{api_url}`')
 
     return output_articles
 
@@ -110,4 +109,3 @@ def export_data_to_csv(output_articles:list):
     output_path = LOCAL_RAW_DATA_PATH / f'nyt-articles-{time.time()}.csv'
     df = pd.DataFrame(output_articles)
     df.to_csv(output_path)
-    logger.info(f'{df.shape[0]:,} articles succesfully dumped into {output_path}')
