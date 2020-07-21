@@ -42,3 +42,8 @@ def consolidate_articles(prefix:str, input_data_path:pl.Path=LOCAL_RAW_DATA_PATH
     logger.info(f"`exploded_df` sucessfully exported to {output_data_path / 'nyt-articles-consolidated-exploded.csv'}")
 
     return df, exploded_df
+
+def load_normalized_nyt_df(df_path:pl.Path):
+    df = pd.read_csv(df_path, index_col=0)
+    df = normalize_dtypes_nyt(df)
+    return df
