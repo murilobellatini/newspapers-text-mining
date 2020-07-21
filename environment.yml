@@ -20,6 +20,7 @@ dependencies:
   - pyarrow
   - fastparquet
   - python-json-logger
+  - textblob
   - pip:
     - -e . # installs src through setup.py
   
