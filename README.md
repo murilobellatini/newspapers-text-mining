@@ -4,7 +4,9 @@
 
 ## Scope
 
-The main goal is to showcase how I personally approach Data Science problems specifically when it comes to Text Mining. Therefore I usually follow the steps below, which are explained as follows:
+The main goal of this project is to build a production ready Text Classifier wrapped inside an API in order to showcase how I personally approach Data Science problems specifically when it comes to Text Mining.
+
+Therefore I usually follow the steps below, which are explained as follows:
 
 1. ``Data Extraction``: extract newspaper articles using avaible API's
 2. ``Data Processing``: clean the data before diving in
