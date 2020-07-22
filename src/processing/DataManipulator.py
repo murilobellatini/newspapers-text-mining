@@ -80,7 +80,6 @@ def train_text_classifier(df:pd.DataFrame, text_column:str, target_column:str, c
 
 
 def plot_prediction_mistakes(df:pd.DataFrame, y_pred:pd.Series, y_test:pd.Series, category_to_id:dict, conf_mat:np.ndarray, indices_test:pd.Index, top_n_results:int=2):
-    pd.options.display.max_colwidth=300
     
     for predicted in category_to_id.keys():
         for actual in category_to_id.keys():
