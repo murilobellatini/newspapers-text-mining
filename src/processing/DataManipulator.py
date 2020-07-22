@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 from sklearn.feature_selection import chi2
@@ -79,30 +78,6 @@ def train_text_classifier(df:pd.DataFrame, text_column:str, target_column:str, c
     clf = classifier().fit(X_train_tfidf, y_train)
     return count_vect, clf
 
-def compare_models(classifiers:list, features:np.array, labels:pd.Series, cv:int=5, scoring:str='accuracy'):
-    """
-    Plots chart comparing models based on cross validation method.
-    - classifiers: list of classifiers to be compared
-    - features: numpy array of text features (result of vectorizer)
-    - labels: pandas Seires with target labels factorized (numeric values)
-    - scoring: scoring metric, default is `accuracy`
-    """
-    
-    entries = []
-    for model in tqdm(classifiers):
-        model_name = model.__class__.__name__
-        scores = cross_val_score(model, features, labels, scoring=scoring, cv=cv)
-        for fold_idx, score in enumerate(scores):
-            entries.append((model_name, fold_idx, score))
-    cv_df = pd.DataFrame(entries, columns=['model_name', 'fold_idx', scoring])
-    sns.boxplot(x='model_name', y=scoring, data=cv_df)
-    sns.stripplot(x='model_name', y=scoring, data=cv_df, 
-                  size=8, jitter=True, edgecolor="gray", linewidth=2)
-
-    plt.title('Model Comparison')
-    plt.show()
-
-    return cv_df
 
 def plot_prediction_mistakes(df:pd.DataFrame, y_pred:pd.Series, y_test:pd.Series, category_to_id:dict, conf_mat:np.ndarray, indices_test:pd.Index, top_n_results:int=2):
     pd.options.display.max_colwidth=300
