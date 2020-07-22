@@ -57,6 +57,12 @@ def predict_text(text, classifier, vectorizer):
     """
     return {'text': text, 'prediction': classifier.predict(vectorizer.transform([text]))[0]}
 
+def predict_text_label(text, model, tfidf, id_to_category):
+    """
+    Returns predicted label of `text` based on `classifier` and `vectorizer`.
+    """
+    return {'text': text, 'prediction': id_to_category[model.predict(tfidf.transform([text]))[0]]}
+
 def train_text_classifier(df:pd.DataFrame, text_column:str, target_column:str, classifier):
     """
     Returns fitted vectorizer and classifier based on df DataFrame.
