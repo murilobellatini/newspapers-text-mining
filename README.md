@@ -8,9 +8,9 @@ The main goal is to showcase how I personally approach Data Science problems spe
 
 1. ``Data Extraction``: extract newspaper articles using avaible API's
 2. ``Data Processing``: clean the data before diving in
-3. ``Exploratory Data Analysis (EDA)``: draw insights via Sentment Analysis and Text Modelling (**Word2Vec** and **WordEmbeddings**)
-4. ``Modeling``: build a Text Classifier
-5. ``Productization``: deploy Text Classifier via API end-point
+3. ``Exploratory Data Analysis (EDA)``: draw insights via Sentment Analysis
+4. ``Modeling``: build a Text Classifier (wip)
+5. ``Productization``: deploy Text Classifier via API end-point (wip)
 
 ## How to run
 
