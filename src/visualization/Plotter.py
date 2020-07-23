@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from tqdm import tqdm
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 from sklearn.metrics import confusion_matrix
