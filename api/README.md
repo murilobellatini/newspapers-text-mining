@@ -16,11 +16,11 @@ pipenv shell
 pip install -r requirements.txt
 ```
 
-### 2. Run API on port 5000 of `localhost`
+### 2. Run API on port 8000 of `localhost`
 
 ```bash
 pipenv shell
-python app.py
+uvicorn app:app --reload
 ```
 
 ### 3. Test API
@@ -42,8 +42,23 @@ python test.py
 {"content-type": "application/json", "Accept-Charset": "UTF-8"}
 ```
 
-### Data
+### Data Example
+
+#### Input
 
 ```json
-{"text": TEXT_TO_BE_PREDICTED}
+{
+    "item_id": 1,
+    "text": "Trump Steps Up His Assault on Biden With Scattershot Attacks, Many False"
+}
+```
+
+#### Output
+
+```json
+{
+    "item_id": 1,
+    "text": "Trump Steps Up His Assault on Biden With Scattershot Attacks, Many False",
+    "prediction": "Politics"
+}
 ```

@@ -1,24 +1,31 @@
 """
-Script to run API on localhost:5000
+Script to run API on localhost:8000
 """
 
 import os
 import joblib
+import requests
 import pathlib as pl
-from flask import Flask, request, redirect, url_for, flash, jsonify
+from typing import Optional
+from fastapi import FastAPI
+from pydantic import BaseModel
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route('/api/', methods=['POST'])
-def predict_label():
+class Item(BaseModel):
+    text: str
+    item_id: int
+    prediction: Optional[str] = None
+
+@app.post('/api/')
+def predict_label(item: Item):
     """
-    Returns prediction based on input `{"text": TEXT_TO_BE_PREDICTED}`
+    Returns prediction for Text Classification based using
+    LinearSVC trained model over 20k articles from New York Times
     """
-    data = request.get_json()
-    text = data['text']
-    prediction = id2label[clf.predict(vect.transform([text]))[0]]
+    item.prediction = id2label[clf.predict(vect.transform([item.text]))[0]]
     
-    return jsonify(prediction)
+    return item
 
 def load_model(classifier:str, vectorizer:str, id_to_tabel_dict:str):
     """
@@ -31,6 +38,4 @@ def load_model(classifier:str, vectorizer:str, id_to_tabel_dict:str):
 
     return clf, vect, id2label
 
-if __name__ == '__main__':
-    clf, vect, id2label = load_model('LinearSVC', 'TfidfVectorizer', 'IdToLabelDict')
-    app.run(debug=True, host='0.0.0.0')
+clf, vect, id2label = load_model('LinearSVC', 'TfidfVectorizer', 'IdToLabelDict')
