@@ -12,7 +12,7 @@ Therefore I usually follow the steps below, which are explained as follows:
 2. ``Data Processing``: clean the data before diving in
 3. ``Exploratory Data Analysis (EDA)``: draw insights via Sentiment Analysis
 4. ``Modeling``: build a supervised Text Classifier and test unsupervised learning via Word2Vec
-5. ``Productization``: deploy Text Classifier via API end-point (wip)
+5. ``Productization``: deploy Text Classifier via API end-point
 
 ## How to run
 
