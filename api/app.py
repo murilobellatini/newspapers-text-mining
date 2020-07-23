@@ -1,5 +1,5 @@
 """
-Script to run API
+Script to run API on localhost:5000
 """
 
 import os

@@ -1,6 +1,6 @@
 # News Desk Text Classifier API
 
-> This API wraps a LinearSVC model to predict new desk label (subject) of a given text. It was trained over 20 thousand NYT Articles from past 18 months.
+> This API wraps a LinearSVC model to predict news desk label (subject) of a given text. It was trained over 20 thousand NYT Articles from past 18 months.
 
 ## Requirements
 

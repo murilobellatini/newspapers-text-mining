@@ -1,3 +1,6 @@
+"""
+Script to test if API run succeeded
+"""
 import json
 import requests
 
