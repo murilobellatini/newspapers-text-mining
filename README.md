@@ -12,7 +12,7 @@ Therefore I usually follow the steps below, which are explained as follows:
 2. ``Data Processing``: clean the data before diving in ([notebooks](notebooks/processing))
 3. ``Exploratory Data Analysis (EDA)``: draw insights via Sentiment Analysis ([notebooks](notebooks/eda))
 4. ``Modeling``: build a supervised Text Classifier and clusterize articles using GloVe Word2Vec ([notebooks](notebooks/modeling))
-5. ``Productization``: deploy Text Classifier via API end-point ([notebooks](api))
+5. ``Productization``: deploy Text Classifier via API end-point ([api](api))
 
 ## How to run
 
