@@ -32,6 +32,9 @@ def getLogger(name:str, logging_level:int=INFO):
 
 
 def set_logging_ini_file():
+    """
+    Updated logging ini file based on local paths.
+    """
 
     ini_template = LOCAL_CONFIG_PATH / 'logging_template.ini'
     ini_output = LOCAL_CONFIG_PATH / 'logging.ini'
@@ -44,6 +47,9 @@ def set_logging_ini_file():
 
 
 def load_log2dataframe(logging_path=LOCAL_LOGGING_PATH):
+    """
+    Returns logs as DataFrame for exploration.
+    """
 
     with open(logging_path, mode='r', encoding='utf8') as fp:
         jsons = [json.loads(j) for j in fp.read().splitlines()]

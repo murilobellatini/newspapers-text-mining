@@ -1,3 +1,4 @@
+import string
 import numpy as np
 import pandas as pd
 import pathlib as pl
@@ -30,3 +31,9 @@ def explode_column_nyt(df,column:str='keywords'):
     exploded_df = exploded_df.drop(column, axis=1).join(tmp)
 
     return exploded_df
+
+def remove_punctuation(text:str):
+    """
+    Returns text without punctuation.
+    """
+    return text.translate(str.maketrans('', '', string.punctuation))
