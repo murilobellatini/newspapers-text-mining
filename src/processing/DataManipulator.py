@@ -79,11 +79,13 @@ def train_text_classifier(df:pd.DataFrame, text_column:str, target_column:str, c
     return count_vect, clf
 
 
-def plot_prediction_mistakes(df:pd.DataFrame, y_pred:pd.Series, y_test:pd.Series, category_to_id:dict, conf_mat:np.ndarray, indices_test:pd.Index, top_n_results:int=2):
-    
+def plot_prediction_mistakes(df:pd.DataFrame, y_pred:pd.Series, y_test:pd.Series, category_to_id:dict, conf_mat:np.ndarray, indices_test:pd.Index, top_n_results:int=2, label_column:str='news_desk', text_column:str='abstract'):
+    """
+    Displays predicitions mistakes for each label.
+    """
     for predicted in category_to_id.keys():
         for actual in category_to_id.keys():
             if predicted != actual and conf_mat[actual, predicted] >= 10:
                 print("'{}' predicted as '{}' : {} examples.".format(category_to_id[actual], category_to_id[predicted], conf_mat[actual, predicted]))
-                display(df.loc[indices_test[(y_test == actual) & (y_pred == predicted)]][['news_desk', 'abstract']].head(top_n_results))
+                display(df.loc[indices_test[(y_test == actual) & (y_pred == predicted)]][[label_column, text_column]].head(top_n_results))
                 print('')

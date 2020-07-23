@@ -9,7 +9,10 @@ from sklearn.model_selection import train_test_split, cross_val_score
 
 stopwords = set(STOPWORDS)
 
-def show_wordcloud(data, title = None):
+def show_wordcloud(data:str, title = None):
+    """
+    Plots Word Cloud based on string `data`
+    """
     wordcloud = WordCloud(
         background_color='white',
         stopwords=stopwords,
@@ -29,9 +32,12 @@ def show_wordcloud(data, title = None):
     plt.show()
 
 
-def plot_nyt_word_incidence(df:pd.DataFrame, lookup_word:str, freq='M'):
+def plot_nyt_word_incidence(df:pd.DataFrame, lookup_word:str, freq='M', text_column:str='abstract'):
+    """
+    Plots bar chart with incidence of `lookup_word` in df with text field on column `text_column`.
+    """
 
-    df['mention_tmp'] = df.abstract.str.extract(f'(\w*{lookup_word}\w*)')[0].notna()
+    df['mention_tmp'] = df[text_column].str.extract(f'(\w*{lookup_word}\w*)')[0].notna()
     mask = df['mention_tmp']
     tmp = df.groupby([pd.Grouper(key='pub_date', freq=freq)]).mention_tmp.mean().sort_index()
     _ = tmp.plot(kind='bar', stacked=True, colormap='viridis',

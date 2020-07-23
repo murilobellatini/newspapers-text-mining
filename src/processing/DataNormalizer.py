@@ -32,5 +32,8 @@ def explode_column_nyt(df,column:str='keywords'):
 
     return exploded_df
 
-def remove_punctuation(text):
+def remove_punctuation(text:str):
+    """
+    Returns text without punctuation.
+    """
     return text.translate(str.maketrans('', '', string.punctuation))
