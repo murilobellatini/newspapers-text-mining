@@ -21,6 +21,6 @@ dependencies:
   - fastparquet
   - python-json-logger
   - textblob
+  - py-xgboost
   - pip:
     - -e . # installs src through setup.py
-  
