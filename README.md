@@ -4,8 +4,8 @@
 
 #### Results achieved so far
 
-1. Production-ready LinearSVC Text Classifier with 82% accuracy for predicting 6 labels (from Politics to Sports) available via API
-2. XGBoost Classifier with 92% accuracy for predicting unsupervised generated labels of similar subjects (wip)
+1. LinearSVC Text Classifier with 82% accuracy for predicting 6 labels (from Politics to Sports) available via containerized API
+2. XGBoost Classifier with 92% accuracy for predicting unsupervised generated labels of also 6 different subjects
 
 ## Scope
 
