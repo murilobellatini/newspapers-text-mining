@@ -4,24 +4,20 @@
 
 ## Requirements
 
-* `Python 3.7.6`
-* `pipenv`
+* `docker` >= 19.03.9
+* `docker-compose` >= 1.25.0
 
 ## How to run
 
 ### 1. Setup Virtual Environment
 
 ```bash
-pipenv shell
-pip install -r requirements.txt
+docker-compose up --build
 ```
 
-### 2. Run API on port 8000 of `localhost`
+docker build -t myimage .
 
-```bash
-pipenv shell
-uvicorn app:app --reload
-```
+docker run -d --name mycontainer -p 8000:8000 myimage
 
 ### 3. Test API
 
