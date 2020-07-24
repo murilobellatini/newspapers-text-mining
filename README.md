@@ -32,7 +32,7 @@ All technologies involved in this project are described below more or less in th
 * `Model Selection`: Train Test Split and K-Fold Cross Validation
 * `API`: Data Extraction from NYT, Sentiment Analysis with TextBlob, Productization / Deployment with FastAPI
 
-> **Main libraries**: scikit-learn, xgboost, textblob, fastapi, pandas, numpy, seaborn, matplotlib
+> **Main libraries and frameworks**: scikit-learn, xgboost, textblob, fastapi, pandas, numpy, seaborn, matplotlib, docker, docker-compose
 
 ## How to run
 
