@@ -14,6 +14,21 @@ Therefore I usually follow the steps below, which are explained as follows:
 4. ``Modeling``: build a supervised Text Classifier and clusterize articles using GloVe Word2Vec ([notebooks](notebooks/modeling))
 5. ``Productization``: deploy Text Classifier via API end-point ([api](api))
 
+## Applied Technologies
+
+All technologies involved in this project are described below more or less in the order of the notebooks.
+
+1. `Feature Extraction`: Tfidf Vectorizer and RegEx
+2. `Supervised Learning`: LinearSVC, Logistic Regression, Multinomial Naive Bayes, Random Forest and XGBoost Classifiers
+3. `Clustering`: DBSCAN and K-Means
+4. `Transferred Learning`: GloVe Word2Vec
+5. `Dimensionality Reduction`: t-SNE
+6. `Statistical Testing`: Chi Squared for words correlations to labels
+7. `Model Selection`: Train Test Split and K-Fold Cross Validation
+8. `API`: Data Extraction from NYT, Sentiment Analysis with TextBlob, Productization / Deployment with FastAPI
+
+> **Main libraries**: scikit-learn, xgboost, textblob, fastapi, pandas, numpy, seaborn, matplotlib
+
 ## How to run
 
 ### Requirements
