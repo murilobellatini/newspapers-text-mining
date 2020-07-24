@@ -15,7 +15,7 @@
 docker-compose up --build
 ```
 
-### 3. Test API
+### 2. Test API
 
 > Expected outcome is `<Response [200]> "Politics"`
 
