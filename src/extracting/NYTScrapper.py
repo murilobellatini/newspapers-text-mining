@@ -72,7 +72,7 @@ def get_day_range_list(begin_date:datetime.datetime, end_date:datetime.datetime)
 
 def extract_desk_articles(desks:list, begin_date:datetime.datetime, end_date:datetime.datetime, sleep_time:int=10, export_data:bool=True):
     """
-    Returns list of articles within scope:
+    Exports articles to csv's (one per request) and returns list objects.
     - `desks`: list of themes to be scrapped
     - `begin_date`: begin date for scrapping
     - `end_date`: end date for scrapping
