@@ -1,4 +1,4 @@
-# Text Mining Data Science Project - Newspapers
+# Data Science Project - Newspapers Text Mining 
 
 > Development repo of end-to-end Data Science project for extracting insights from Newspaper articles via Text Mining toolkit
 
@@ -23,14 +23,14 @@ Therefore I usually follow the steps below, which are explained as follows:
 
 All technologies involved in this project are described below more or less in the order of the notebooks.
 
-1. `Feature Extraction`: Tfidf Vectorizer and RegEx
-2. `Supervised Learning`: LinearSVC, Logistic Regression, Multinomial Naive Bayes, Random Forest and XGBoost Classifiers
-3. `Clustering`: DBSCAN and K-Means
-4. `Transferred Learning`: GloVe Word2Vec
-5. `Dimensionality Reduction`: t-SNE
-6. `Statistical Testing`: Chi Squared for words correlations to labels
-7. `Model Selection`: Train Test Split and K-Fold Cross Validation
-8. `API`: Data Extraction from NYT, Sentiment Analysis with TextBlob, Productization / Deployment with FastAPI
+* `Feature Extraction`: Tfidf Vectorizer and RegEx
+* `Supervised Learning`: LinearSVC, Logistic Regression, Multinomial Naive Bayes, Random Forest and XGBoost Classifiers
+* `Clustering`: DBSCAN and K-Means
+* `Transferred Learning`: GloVe Word2Vec
+* `Dimensionality Reduction`: t-SNE
+* `Statistical Testing`: Chi Squared for words correlations to labels
+* `Model Selection`: Train Test Split and K-Fold Cross Validation
+* `API`: Data Extraction from NYT, Sentiment Analysis with TextBlob, Productization / Deployment with FastAPI
 
 > **Main libraries**: scikit-learn, xgboost, textblob, fastapi, pandas, numpy, seaborn, matplotlib
 
