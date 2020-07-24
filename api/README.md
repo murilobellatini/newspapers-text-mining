@@ -36,15 +36,17 @@ python test.py
 
 `POST /api`
 
-### Header
+### Request example
+
+#### Header
 
 ```json
 {"content-type": "application/json", "Accept-Charset": "UTF-8"}
 ```
 
-### Data Example
+#### Body
 
-#### Input
+##### Input
 
 ```json
 {
@@ -53,7 +55,7 @@ python test.py
 }
 ```
 
-#### Output
+##### Output
 
 ```json
 {
