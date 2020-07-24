@@ -9,22 +9,17 @@
 
 ## How to run
 
-### 1. Setup Virtual Environment
+### 1. Build and run docker
 
 ```bash
 docker-compose up --build
 ```
-
-docker build -t myimage .
-
-docker run -d --name mycontainer -p 8000:8000 myimage
 
 ### 3. Test API
 
 > Expected outcome is `<Response [200]> "Politics"`
 
 ```bash
-pipenv shell
 python test.py
 ```
 
