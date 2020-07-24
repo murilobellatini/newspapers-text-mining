@@ -2,6 +2,11 @@
 
 > Development repo of end-to-end Data Science project for extracting insights from Newspaper articles via Text Mining toolkit
 
+#### Results achieved so far
+
+1. Production-ready LinearSVC Text Classifier with 82% accuracy for predicting 6 labels (from Politics to Sports) available via API
+2. XGBoost Classifier with 92% accuracy for predicting unsupervised generated labels of similar subjects (wip)
+
 ## Scope
 
 The main goal of this project is to build a production ready Text Classifier wrapped inside an API in order to showcase how I personally approach Data Science problems specifically when it comes to Text Mining.
