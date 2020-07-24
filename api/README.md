@@ -25,7 +25,13 @@ python test.py
 
 ## API Routes
 
-`POST /api`
+`GET /docs`
+
+> Returns current documentation of API methods
+
+`POST /predict`
+
+> Returns prediction of label for given text in format below
 
 ### Request example
 

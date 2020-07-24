@@ -4,7 +4,7 @@ Script to test if API run succeeded
 import json
 import requests
 
-url = 'http://localhost:8000/api/'
+url = 'http://localhost:8000/predict/'
 data = {
     'item_id': 1,
     'text': 'Trump Steps Up His Assault on Biden With Scattershot Attacks, Many False'

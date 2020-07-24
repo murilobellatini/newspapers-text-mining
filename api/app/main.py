@@ -17,7 +17,7 @@ class Item(BaseModel):
     item_id: int
     prediction: Optional[str] = None
 
-@app.post('/api/')
+@app.post('/predict/')
 def predict_label(item: Item):
     """
     Returns prediction for Text Classification based using
