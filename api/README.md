@@ -23,6 +23,10 @@ docker-compose up --build
 python test.py
 ```
 
+### 3. Try live demo on `localhost`
+
+> Access http://localhost to interact with the API and see the solution in action!
+
 ## API Routes
 
 `GET /docs`
