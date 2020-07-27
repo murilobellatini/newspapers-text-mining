@@ -38,7 +38,10 @@ python test.py
 #### Request Header
 
 ```json
-{"content-type": "application/json", "Accept-Charset": "UTF-8"}
+{
+    "content-type": "application/json",
+    "Accept-Charset": "UTF-8"
+}
 ```
 
 #### Request Body
