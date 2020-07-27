@@ -4,8 +4,8 @@
 
 ## Requirements
 
-* `docker` >= 19.03.9
-* `docker-compose` >= 1.25.0
+* `docker >= 19.03.9`
+* `docker-compose >= 1.25.0`
 
 ## How to run
 
@@ -33,17 +33,18 @@ python test.py
 
 > Returns prediction of label for given text in format below
 
-### Request example
+### Example
 
-#### Header
+#### Request Header
 
 ```json
-{"content-type": "application/json", "Accept-Charset": "UTF-8"}
+{
+    "content-type": "application/json",
+    "Accept-Charset": "UTF-8"
+}
 ```
 
-#### Body
-
-##### Input
+#### Request Body
 
 ```json
 {
@@ -52,7 +53,7 @@ python test.py
 }
 ```
 
-##### Output
+#### Response
 
 ```json
 {
