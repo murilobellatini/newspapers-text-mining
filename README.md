@@ -7,6 +7,10 @@
 1. LinearSVC Text Classifier with 82% accuracy for predicting 6 labels (from Politics to Sports) available via containerized API
 2. XGBoost Classifier with 92% accuracy for predicting unsupervised generated labels of also 6 different subjects
 
+#### Current solution in action!
+
+![NYT News Desk Classifier](/media/nyt-classifier-svclinear.gif)
+
 ## Scope
 
 The main goal of this project is to build a production ready Text Classifier wrapped inside an API in order to showcase how I personally approach Data Science problems specifically when it comes to Text Mining.
