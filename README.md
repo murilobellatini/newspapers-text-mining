@@ -61,6 +61,8 @@ conda activate ds-env
 
     ├── README.md                   <- The top-level README for scientists and engineers.
     │
+    ├── api                         <- API folder with containerized Text Classifier
+    │
     ├── data                        <- Data folder (versioned in the cloud, not with git)
     │   ├── external                <- Data from third party sources.
     │   ├── interim                 <- Intermediate data that has been transformed.
