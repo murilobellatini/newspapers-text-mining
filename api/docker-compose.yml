@@ -1,8 +1,25 @@
 version: '3'
 
 services: 
-    subject-predictor-api:
-        build: ./
+    backend:
+        build: ./backend
+        networks:
+            - my-net
         ports:
             - "8000:8000"
         command: uvicorn main:app --host 0.0.0.0 --port 8000
+        environment:
+            REPLICA2_URL: "http://backend:8000"
+    frontend:
+        build: ./frontend
+        networks:
+            - my-net
+        ports:
+            - "80:80"
+        command: python run.py
+        environment:
+            REPLICA2_URL: "http://frontend:80"
+
+networks:
+    my-net:
+        driver: bridge

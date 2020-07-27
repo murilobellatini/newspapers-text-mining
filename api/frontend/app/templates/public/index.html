@@ -1,0 +1,46 @@
+{% extends 'public/templates/public_template.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <h1>News Desk Predictor</h1>
+            <hr>
+            <em>SVCLinear Text Classifier trained with 20k New York Time article abstracts from past 18 months</em>
+
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label class="mt-3">Text to be predicted</label>
+                    <input type="text" class="form-control" id="text" name="text" placeholder="Enter text">
+                </div>
+    
+                <button class="btn btn-primary" type="submit">Predict!</button>
+
+
+                    {% for prediction in pŕedictions %}
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h4>Text # {{ prediction["item_id"] }}</h4>
+                            <hr>
+        
+                            <p><strong>Content: {{ prediction["text"] }}</strong></p>
+                            <p class="text-muted">Prediction: {{ prediction["prediction"] }}</p>
+        
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+© 2020 GitHub, Inc.
