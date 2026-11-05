@@ -1,5 +1,9 @@
 # Data Science Project - Newspapers Text Mining 
 
+> Classifies news articles into 6 topics (82% accuracy).
+> From raw data to a containerized API.
+> Live demo below.
+
 > Development repo of end-to-end Data Science project for extracting insights from Newspaper articles via Text Mining toolkit
 
 #### Results achieved so far
