@@ -94,3 +94,7 @@ conda activate ds-env
     └── src                         <- Reusable Python code
         ├── __init__.py             <- Makes src a Python module
         └── ...                     <- Further modules as work in progress
+
+## Cite
+
+If this helps you, please credit Murilo Bellatini and link this repo. GitHub's "Cite this repository" button uses `CITATION.cff`.

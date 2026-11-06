@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "newspapers-text-mining"
+abstract: "Classifies newspaper articles into topics, served as a containerized API."
+type: software
+authors:
+  - family-names: Bellatini
+    given-names: Murilo
+repository-code: "https://github.com/murilobellatini/newspapers-text-mining"
+license: MIT
